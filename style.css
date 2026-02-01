@@ -152,7 +152,7 @@ body {
 .couple-section { padding: 50px 20px; }
 .couple-container { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 40px; }
 .person { text-align: center; padding: 20px; border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 15px; background: rgba(0,0,0,0.2); }
-.name { font-size: 2.5rem; color: var(--gold); margin: 10px 0; }
+.name { font-size: 3.5rem; color: var(--gold); font-weight: bold; margin: 10px 0; }
 .relation { font-size: 1rem; color: #ccc; margin: 5px 0; }
 .tag { font-size: 0.8rem; letter-spacing: 3px; color: rgba(255,255,255,0.5); margin-top: 10px; }
 
@@ -358,3 +358,4 @@ body {
         max-width: 80%; /* Prevents it from being too wide */
     }
 }
+
