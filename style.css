@@ -325,4 +325,36 @@ body {
         transform: translateY(110vh) rotate(360deg);
         opacity: 0;
     }
+
+}
+/* --- MOBILE FIXES --- */
+@media (max-width: 768px) {
+    /* 1. Fix the Mantra Text Alignment */
+    .mantra {
+        font-size: 1.8rem; /* Smaller font so it fits on one line */
+        line-height: 1.5;
+        padding: 0 10px; /* Add breathing room on sides */
+    }
+    
+    .mantra span {
+        display: inline-block; /* Keeps the || and text together */
+        white-space: nowrap; /* Prevents breaking mid-sentence */
+    }
+
+    /* 2. Fix the Overlapping Bubble */
+    .events-section {
+        /* Adds extra space at the bottom so you can scroll 
+           past the bubble to see the timing */
+        padding-bottom: 150px !important; 
+    }
+    
+    /* Optional: Make the bubble slightly smaller on mobile */
+    .floating-bubble {
+        font-size: 1rem;
+        padding: 10px 20px;
+        bottom: 20px;
+        right: 20px;
+        width: auto;
+        max-width: 80%; /* Prevents it from being too wide */
+    }
 }
