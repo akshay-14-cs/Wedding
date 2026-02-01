@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>शुभविवाह</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Rozha+One&family=Amita:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="curtain-overlay">
+        <div class="curtain-panel left-panel"></div>
+        
+        <div class="curtain-panel right-panel"></div>
+        
+        <div class="curtain-content" id="enter-btn">
+            <h1 class="curtain-title">|| शुभविवाह ||</h1>
+            <p class="curtain-subtitle">अभय - माधुरी</p>
+            <!-- <button id="enter-btn"></button>
+            <p class="music-note">🎵 Music will play automatically</p> -->
+        </div>
+    </div>
+
+    <audio id="bg-music" loop>
+        <source src="Shehnai.mp3" type="audio/mp3">
+    </audio>
+
+    <section class="hero">
+        <div class="hero-content">
+            <img src="ganesh.png" alt="Ganesha" class="god-img">
+            <h2 class="mantra">|| श्री गणेश प्रसन्न ||   || श्री खंडोबा प्रसन्न ||</h2>
+            <div class="gold-divider"></div>
+            <p class="intro-text">कृ. स. न. वि. वि. आमचे येथे श्रीहरीकृपेकरुन</p>
+            <!-- <div class="scroll-indicator">SCROLL TO BLESS</div> -->
+        </div>
+    </section>
+
+    <section class="couple-section">
+        <div class="couple-container">
+            
+            <div class="person groom flip-card" onclick="this.classList.toggle('flipped')">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h2 class="name"><h4>चि.</h4> <h1>अभय</h1></h2>
+                        <p class="relation">कै. शंकर बापू नांदुरके यांचे नातू</p>
+                        <p class="relation">व श्री. रविंद्रकुमार शंकर नांदुरके</p>
+                        <p class="relation">यांचे ज्येष्ठ सुपुत्र</p>
+                        <div class="tag">वर </div>
+                    </div>
+                    <div class="flip-card-back">
+                        <img src="abhay.png" alt="Abhay" class="back-img">
+                    </div>
+                </div>
+            </div>
+
+            <div class="center-img-container">
+                <img src="swastik.png" alt="Wedding Symbol" class="symbol-img">
+            </div>
+
+            <div class="person bride flip-card" onclick="this.classList.toggle('flipped')">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h2 class="name"><h4>चि. सौ. कां.</h4> <h1>माधुरी</h1></h2>
+                        <p class="relation">कै. मारुती खंडू बागडे यांची नात</p>
+                        <p class="relation">व श्री. बाबूराव मारुती बागडे</p>
+                        <p class="relation">यांची द्वितीय सुकन्या</p>
+                        <div class="tag">वधू </div>
+                    </div>
+                    <div class="flip-card-back">
+                        <img src="madhuri.png" alt="Madhuri" class="back-img">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="events-section">
+        <h1 class="main-title">शुभविवाह</h1>
+        <div class="cards-container">
+        
+           
+            <div class="card glass-effect" id="haldi-card">
+                <h3>साखरपुडा & हळदी</h3>
+                <p class="date">25 Feb 2026</p>
+                <div class="click-instruction">👇 Click for Location</div>
+            </div>
+
+            <div class="card royal-gold" id="venue-card">
+                <h3>विवाह सोहळा</h3>
+                <p class="date-large">25 Feb 2026</p>
+                <p class="time">दुपारी ०२:१५ मि.</p>
+                <div class="click-instruction">👇 Click for Location</div>
+            </div>
+
+        </div>
+    </section>
+
+    <div id="haldi-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" data-target="haldi-modal">×</span>
+            <h2 class="modal-title">साखरपुडा & हळदी</h2>
+            <div class="gold-divider-small"></div>
+            <div class="modal-body">
+                <p class="time-text">🕒 सकाळी १०:३२ मि.</p>
+                <a href="https://maps.app.goo.gl/XwXjs5bTwjyLehhr7" target="_blank" class="map-btn">
+                    📍 विवाहस्थळी (View on Map)
+                </a>
+                <p class="invite-msg"></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="venue-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" data-target="venue-modal">×</span>
+            <h2 class="modal-title">विवाहस्थळ</h2>
+            <div class="gold-divider-small"></div>
+            <div class="modal-body">
+                <p class="venue-name">श्री सद्गुरु मंगल कार्यालय</p>
+                <p class="venue-address">कंदर ता.करमाळा जि.सोलापूर</p>
+                <a href="https://maps.app.goo.gl/XwXjs5bTwjyLehhr7" target="_blank" class="map-btn">
+                    📍 Google Map वर पहा 
+                </a>
+                <p class="invite-msg">तरी वधु वरास शुभाशीर्वाद देण्यासाठी सहकुटुंब सहपरिवार अगत्य येण्याचे करावे ही विनंती</p>
+            </div>
+        </div>
+    </div>
+<div id="countdown-timer">
+    <div class="time-box">
+        <span id="days">00</span>
+        <span class="label">Days</span>
+    </div>
+    <div class="time-box">
+        <span id="hours">00</span>
+        <span class="label">Hrs</span>
+    </div>
+    <div class="time-box">
+        <span id="minutes">00</span>
+        <span class="label">Min</span>
+    </div>
+    <div class="time-box">
+        <span id="seconds">00</span>
+        <span class="label">Sec</span>
+    </div>
+</div>
+    <div class="floating-bubble">
+        आमच्या दादाच्या लग्नाला यायचं हं! 😍
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
