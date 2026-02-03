@@ -358,4 +358,94 @@ body {
         max-width: 80%; /* Prevents it from being too wide */
     }
 }
+.rotating-words-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    margin: 20px 0;
+    overflow: hidden;
+    perspective: 1000px; /* Essential for 3D effect */
+}
+
+.carousel-container {
+    position: relative;
+    width: 150px; /* Width of a single card */
+    height: 100px; /* Height of a single card */
+    transform-style: preserve-3d;
+}
+
+.carousel {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    /* This animation rotates the whole circle */
+    animation: rotateCarousel 12s infinite linear; 
+}
+
+/* Individual Card Styling */
+.word-card {
+    position: absolute;
+    width: 140px;
+    height: 90px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #d4af37; /* Gold border */
+    border-radius: 10px;
+    color: #800000; /* Maroon text */
+    font-family: 'Shree Devanagari 1060 Shree Dev1060 Bold', cursive;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    /* Make the back visible for rotation */
+    backface-visibility: visible; 
+    opacity: 0.9;
+}
+
+/* CALCULATION: 
+   360 degrees / 5 items = 72 degrees per item.
+   TranslateZ (Depth) moves them out to form the circle.
+*/
+
+.word-card:nth-child(1) { transform: rotateY(0deg) translateZ(160px); }
+.word-card:nth-child(2) { transform: rotateY(72deg) translateZ(160px); }
+.word-card:nth-child(3) { transform: rotateY(144deg) translateZ(160px); }
+.word-card:nth-child(4) { transform: rotateY(216deg) translateZ(160px); }
+.word-card:nth-child(5) { transform: rotateY(288deg) translateZ(160px); }
+
+/* Animation Keyframes */
+@keyframes rotateCarousel {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(-360deg);
+    }
+}
+
+/* Mobile Responsiveness adjustment */
+@media (max-width: 600px) {
+    .rotating-words-section {
+        height: 160px;
+    }
+    .carousel-container {
+        width: 120px;
+        height: 80px;
+    }
+    .word-card {
+        width: 110px;
+        height: 70px;
+        font-size: 1rem;
+    }
+    /* Adjust depth for smaller screens */
+    .word-card:nth-child(1) { transform: rotateY(0deg) translateZ(130px); }
+    .word-card:nth-child(2) { transform: rotateY(72deg) translateZ(130px); }
+    .word-card:nth-child(3) { transform: rotateY(144deg) translateZ(130px); }
+    .word-card:nth-child(4) { transform: rotateY(216deg) translateZ(130px); }
+    .word-card:nth-child(5) { transform: rotateY(288deg) translateZ(130px); }
+}
+
 
